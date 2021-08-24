@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+
+		<div class="title">Uniswap Arbitrage Simulation</div>
+		
+		<div class="graph_board" style="">
+			<div class="loading">loading simulation...</div>
+			<div class="graph_wrapper">
+				<div class="graph_content" >
+					<canvas id="buyers_current_symbol" class="main canvas" style="width:100%;"></canvas>
+				</div>
+				<div class="graph_content_overlay" style="">
+					<canvas id="buyers_current_symbol" class="overlay canvas" style="width:100%;"></canvas>
+				</div>
+			</div>
+		</div>
+		<div class="contract_display_board_wrapper" style="">
+			<div class="contract_display_board">
+				<div class="contract display">
+					<div  class="header">Uniswap Contract</div>
+					<div class="reserve_column">
+						Ethereum <div class="ethereum reserve"></div><br>
+						Augur <div class="augur reserve"></div><br>
+						Price <div class="price reserve"></div><br>
+					</div>
+					<div class="messages"></div>
+				</div>
+				<div class="trader_seller display">
+					<div  class="header">Trader Seller Contract</div>
+					<div class="reserve_column" style="">
+						Ethereum <div class="ethereum reserve"></div><br>
+						Augur <div class="augur reserve">0</div><br>
+					</div>
+					<div class="messages"></div>
+				</div>
+				<div class="trader_buyer display">
+					<div  class="header">Trader Buyer Contract</div>
+					<div class="reserve_column" >
+						Ethereum <div class="ethereum reserve"></div><br>
+						Augur <div class="augur reserve">0</div><br>
+					</div>
+					<div class="messages"></div>
+				</div>
+				<div class="trader_arbitrageur display">
+					<div  class="header">Trader Arbitrageur Contract</div>
+					<div class="reserve_column">
+						Ethereum <div class="ethereum reserve"></div><br>
+						Augur <div class="augur reserve"></div><br>
+						<br>
+						Profit <div class="profit reserve">0</div><br>
+					</div>
+					<div class="messages"></div>
+				</div>
+			</div>
+		</div>
+		<div class="graph_board" style="">
+			<div class="graph_wrapper">
+				<div class="graph_content_profit" >
+					<canvas id="" class="profit canvas" style="width:100%;"></canvas>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="js/utils/library/jquery-3.2.0.min.js"></script>
+	<script src="js/utils/library/chart.min.js"></script>
+	
+	<script src="js/BlockChain.js"></script>
+	<script src="js/Trader.js"></script>
+	<script src="js/Contract.js"></script>
+	<script src="js/Centralized_Exchange.js"></script>
+	<script src="js/App.js"></script>
+</html>
